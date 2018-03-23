@@ -14,9 +14,9 @@ export default class Edit extends Component {
         newContent: singlePost[0].content
       }
 
-        this.handleUpdatePost = this.handleUpdatePost.bind(this)
-        this.handleSubmitPost = this.handleSubmitPost.bind(this)
-        this.handleDeletePost = this.handleDeletePost.bind(this)
+      this.handleUpdatePost = this.handleUpdatePost.bind(this)
+      this.handleSubmitPost = this.handleSubmitPost.bind(this)
+      this.handleDeletePost = this.handleDeletePost.bind(this)
     }
 
     componentDidMount () {
@@ -42,11 +42,12 @@ export default class Edit extends Component {
 
           // after post is created redirects to edit posts page to add a tag to post
           window.location.href= "/project3-front/" + response.data._id;
-    })
-  }
+       })
+    }
 
     handleDeletePost(e) {
       e.preventDefault()
+      // AS: Use the axios delete method and delete on the backend!!
       axios.post(`https://ga-aha.herokuapp.com/${this.state.post._id}/deletePost`)
       // redirects to home page
       window.location.href= "/project3-front"

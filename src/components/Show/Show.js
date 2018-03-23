@@ -12,9 +12,8 @@ import {
 export default class Show extends Component {
     constructor(props){
       super(props)
-    // looking for unique id to loop through and find the exact match
-      let selectedPost = this.props.match.params._id
-      let singlePost = props.posts.filter(item => item._id === selectedPost)
+      // looking for unique id to loop through and find the exact match
+
       this.state = {
         post: [],
         created: '',
@@ -24,18 +23,15 @@ export default class Show extends Component {
 
     }
 
-    // fetching the newly created posts,comments and tags
-
+    // fetching the newly created posts, comments and tags
     componentDidMount () {
+      // This should probably be done with one API call!
       let selectedPost = this.props.match.params._id
       axios.get(`https://ga-aha.herokuapp.com/${selectedPost}`)
            .then(response => this.setState({
-             post: response.data
-            }))
-           .catch((err) => console.log(err))
-
-           .then(() => {
-             this.setState({created: this.state.post.createdAt.slice(0, 10)})
+              post: response.data
+            })).catch((err) => console.log(err)).then(() => {
+              this.setState({created: this.state.post.createdAt.slice(0, 10)})
            })
 
       axios.get(`https://ga-aha.herokuapp.com/${selectedPost}/comments`)
@@ -77,7 +73,8 @@ export default class Show extends Component {
                   <div className='comment'key={comment._id}>
                     <p>{comment.content}</p>
                     <h6> ~ {comment.name}</h6>
-                  </div>)
+                  </div>
+                )
               })}
             </ul>
         </section>

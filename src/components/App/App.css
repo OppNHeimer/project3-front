@@ -1,12 +1,5 @@
-
-
-<link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Kumar+One+Outline|Pacifico" rel="stylesheet">
-.header {
-
-}
+/* AS - Script tags won't work in this file */
+/* AS - Make sure to be really consistent on formatting here */
 .background-image{
   background-image: url('./images/Project3 Pic.jpg');
   height: 40vh;
@@ -22,15 +15,15 @@ button {
 .searchTag {
   display: inline;
 }
-.white-text{
 
+.white-text{
   font-weight: bold;
   text-align: center;
   margin-top: -40px;
   margin-left: 500px;
   font-family: 'Pacifico', cursive;
-  /*font-family: 'Faster One', cursive;*/
 }
+
 h1.red-text{
   text-align: center;
   font-family: 'Faster One', cursive;
@@ -40,11 +33,13 @@ h1.red-text{
   position: fixed;
   top: 0;
 }
+
 .header h1 {
   padding: 10vh 10vw 2vh 10vw;
   font-size: 150px;
   font-family: 'Faster One', cursive;
 }
+
 .flexcol{
     display: flex;
     -ms-flex-direction: column;
@@ -56,28 +51,32 @@ h1.red-text{
 .flexcolfeed{
     margin: 10px 0;
     border-left: 1px solid lightgray;
-      display: flex;
-      -ms-flex-direction: column;
-      -webkit-flex-direction: column;
-      flex-direction: column;
-      height: 100%;
-      width: 30%;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
 }
+
 .weatherIcon{
   width: 50px;
   height: 50px;
 }
+
 .weatherInfo{
   color: #700000;
   font-size: 31px;
   margin-bottom: -13px;
 }
+
 .eventStyle {
   margin-left: 20px;
   margin-top: 50px;
   margin-bottom: -20px;
   font-weight: bolder;
 }
+
 .currDate {
   min-height: 150px;
   margin: 40px 20px;
@@ -86,6 +85,7 @@ h1.red-text{
   box-shadow: 1px 1px 5px lightgray;
 
 }
+
 .flexrow {
     display: flex;
     -ms-flex-direction: row;

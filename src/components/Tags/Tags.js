@@ -28,14 +28,13 @@ export default class Tags extends Component {
     axios.post("https://ga-aha.herokuapp.com/createTag", {
         name: this.state.name,
         post: this.state.post
-    })
-    .then((response)=>{
-       window.location.href = "/project3-front/" + response.data.post;
-    })
-    .catch((err) => {
+    }).then((response)=>{
+       window.location.href = "/" + response.data.post
+    }).catch((err) => {
       console.log(err)
     })
   }
+
   render(){
     return(
       <div className="addTag">
